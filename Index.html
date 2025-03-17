@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Zawja! 🎉</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ffe6f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header {
+            background: #ff66b3;
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .message {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .heart {
+            color: #ff0066;
+            font-size: 24px;
+        }
+
+        button {
+            background: #ff66b3;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        #confetti{
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Happy Birthday, My Love! 💖</h1>
+            <p>To the most amazing girlfriend in the world</p>
+        </div>
+
+        <div class="photo-gallery">
+            <!-- Replace these image URLs with your actual photos -->
+            <img src="YOUR_PHOTO_URL_1" alt="Our Memory 1">
+            <img src="YOUR_PHOTO_URL_2" alt="Our Memory 2">
+            <img src="YOUR_PHOTO_URL_3" alt="Our Memory 3">
+        </div>
+
+        <div class="message">
+            <h2>To My Beautiful Zawja,</h2>
+            <p>On your special day, I want to tell you...</p>
+            <ul>
+                <li>❤️ You make every day brighter</li>
+                <li>❤️ Your smile is my favorite sight</li>
+                <li>❤️ I'm grateful for every moment with you</li>
+                <!-- Add more personal messages -->
+            </ul>
+            <p>I love you more than words can say. Happy Birthday, my everything!</p>
+            <p>Forever yours,<br>n4novan AKA Nadx</p>
+        </div>
+
+        <button onclick="showLove()">Click for Surprise! 💌</button>
+
+        <div id="loveMessage" style="display:none;">
+            <h3>Zawja, You Are:</h3>
+            <p>💕 The love of my life<br>
+               🌟 My best friend<br>
+               � My perfect match<br>
+               <!-- Add personalized compliments -->
+            </p>
+        </div>
+
+        <div id="confetti"></div>
+    </div>
+
+    <script>
+        function showLove() {
+            document.getElementById('loveMessage').style.display = 'block';
+            startConfetti();
+            playMusic();
+        }
+
+        function startConfetti() {
+            // Simple confetti effect
+            const confetti = document.getElementById('confetti');
+            for (let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animation = `fall ${Math.random() * 3 + 2}s infinite`;
+                particle.innerHTML = '🎉';
+                confetti.appendChild(particle);
+            }
+        }
+
+        function playMusic() {
+            // Add your favorite song URL
+            const audio = new Audio('YOUR_MUSIC_URL');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
